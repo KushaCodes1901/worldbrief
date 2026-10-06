@@ -11,6 +11,8 @@ Provider documentation reviewed on 6 October 2026:
 
 Display original headlines, clearly labelled source domains, valid publication dates in UTC, available authors, and direct external publisher links. Do not guess publisher names. Omit descriptions because permission for public display across publishers is unresolved. Also omit publisher images, full articles and AI summaries. Fetch through the official API, never scrape or bypass paywalls. React escapes external text instead of inserting provider HTML.
 
+The magazine interface uses six original conceptual topic illustrations generated with the built-in image-generation tool on 6 October 2026. The optimised assets are local WebP files in `public/images/topics`; prompts are recorded in `docs/topic-art-prompts.json`. They are topic artwork, not photographs of news events. Topic tiles carry their own subject labels; any illustration beside a specific headline has a visible “Topic illustration” caption. About explains their origin. No publisher image URL is requested or displayed, and the illustrations do not add provider calls.
+
 Only normalized headline metadata is operationally cached for one hour. Error cooldowns contain no article content and can last longer when Retry-After requests it. No news archive, database or real API response fixtures are committed. Local development caches are generated and ignored; remove `.next` when stopping local live integration if you need to clear that cache. Fixtures are original fictional examples labelled “Sample content” and link to example.com.
 
 ## Unresolved permissions

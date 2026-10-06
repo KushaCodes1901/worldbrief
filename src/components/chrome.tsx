@@ -11,21 +11,17 @@ export function Header() {
           className="wordmark"
           aria-label="WorldBrief home"
         >
+          <span className="brand-symbol" aria-hidden="true">
+            w<span>↗</span>
+          </span>
           WorldBrief<span className="wordmark-dot">.</span>
         </Link>
         <span className="masthead-tagline">
-          A wider world.
-          <br />A little closer.
+          A wider world. A little closer.
         </span>
         <Link href="/about" prefetch={false} className="about-link">
-          About the project <span aria-hidden="true">↗</span>
+          About <span aria-hidden="true">↗</span>
         </Link>
-      </div>
-      <div className="edition-bar shell">
-        <span>
-          <span className="small-dot" /> An independent portfolio project
-        </span>
-        <span>English edition · Built by Shkamb</span>
       </div>
     </header>
   );

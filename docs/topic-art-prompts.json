@@ -1,0 +1,31 @@
+{
+  "generatedOn": "2026-10-06",
+  "tool": "Built-in image_gen (no API key or CLI fallback)",
+  "use": "Conceptual topic illustrations, not reporting photographs",
+  "assets": [
+    {
+      "file": "public/images/topics/general.webp",
+      "prompt": "Use case: stylized-concept. Asset type: wide editorial topic illustration for WorldBrief modern magazine website. Create ONE original landscape image approximately 1536x1024. Exuberant sophisticated editorial collage of tactile cut-paper forms and carefully lit objects with real paper grain and soft studio shadows. Clear strong recognizable silhouette, surprising crops, professional art direction. Palette electric cobalt #2458E8, coral #F16B55, sunflower #F3CE45, teal #1B968D, paper white #F7F8FC, deep ink. Visually coherent magazine series. Leave breathing room for responsive crops. No text, letters, typography, logos, watermark or UI. Not a documentary photograph, not glossy generic 3D clipart.\nSubject: A cut-paper cobalt globe with simple abstract continent shapes, miniature terracotta and white city fragments, swooping coral routes and a sunflower sun. Cobalt backdrop. Asymmetric sweeping diagonal composition."
+    },
+    {
+      "file": "public/images/topics/technology.webp",
+      "prompt": "Use case: stylized-concept. Asset type: wide editorial topic illustration for WorldBrief modern magazine website. Create ONE original landscape image approximately 1536x1024. Exuberant sophisticated editorial collage of tactile cut-paper forms and carefully lit objects with real paper grain and soft studio shadows. Clear strong recognizable silhouette, surprising crops, professional art direction. Palette electric cobalt #2458E8, coral #F16B55, sunflower #F3CE45, teal #1B968D, paper white #F7F8FC, deep ink. Visually coherent magazine series. Leave breathing room for responsive crops. No text, letters, typography, logos, watermark or UI. Not a documentary photograph, not glossy generic 3D clipart.\nSubject: An oversized reflective optical lens, circuit fragment, tiny abstract stars and orbital paths. Teal and cobalt field with a coral paper ring. Dramatic off-centre macro arrangement."
+    },
+    {
+      "file": "public/images/topics/business.webp",
+      "prompt": "Use case: stylized-concept. Asset type: wide editorial topic illustration for WorldBrief modern magazine website. Create ONE original landscape image approximately 1536x1024. Exuberant sophisticated editorial collage of tactile cut-paper forms and carefully lit objects with real paper grain and soft studio shadows. Clear strong recognizable silhouette, surprising crops, professional art direction. Palette electric cobalt #2458E8, coral #F16B55, sunflower #F3CE45, teal #1B968D, paper white #F7F8FC, deep ink. Visually coherent magazine series. Leave breathing room for responsive crops. No text, letters, typography, logos, watermark or UI. Not a documentary photograph, not glossy generic 3D clipart.\nSubject: Abstract marketplace awnings, steps, interlocking exchange paths and stacked geometric economic forms. Golden yellow backdrop with cobalt and coral accents. Angled architectural perspective. No charts or invented financial data."
+    },
+    {
+      "file": "public/images/topics/politics.webp",
+      "prompt": "Use case: stylized-concept. Asset type: wide editorial topic illustration for WorldBrief modern magazine website. Create ONE original landscape image approximately 1536x1024. Exuberant sophisticated editorial collage of tactile cut-paper forms and carefully lit objects with real paper grain and soft studio shadows. Clear strong recognizable silhouette, surprising crops, professional art direction. Palette electric cobalt #2458E8, coral #F16B55, sunflower #F3CE45, teal #1B968D, paper white #F7F8FC, deep ink. Visually coherent magazine series. Leave breathing room for responsive crops. No text, letters, typography, logos, watermark or UI. Not a documentary photograph, not glossy generic 3D clipart.\nSubject: An abstract civic assembly with semicircular seating, sculptural columns and interconnected shapes suggesting discussion. Coral backdrop with cream and cobalt architectural paper. Overhead angular perspective. No flags, identifiable leaders or party symbols."
+    },
+    {
+      "file": "public/images/topics/sports.webp",
+      "prompt": "Use case: stylized-concept. Asset type: wide editorial topic illustration for WorldBrief modern magazine website. Create ONE original landscape image approximately 1536x1024. Exuberant sophisticated editorial collage of tactile cut-paper forms and carefully lit objects with real paper grain and soft studio shadows. Clear strong recognizable silhouette, surprising crops, professional art direction. Palette electric cobalt #2458E8, coral #F16B55, sunflower #F3CE45, teal #1B968D, paper white #F7F8FC, deep ink. Visually coherent magazine series. Leave breathing room for responsive crops. No text, letters, typography, logos, watermark or UI. Not a documentary photograph, not glossy generic 3D clipart.\nSubject: Curving cobalt running track markings, a tennis ball, a generic coral basketball fragment and a dynamic ribbon-like paper arc. Sunflower and cream backdrop. Cropped action diagonals. No teams or athletes."
+    },
+    {
+      "file": "public/images/topics/culture.webp",
+      "prompt": "Use case: stylized-concept. Asset type: wide editorial topic illustration for WorldBrief modern magazine website. Create ONE original landscape image approximately 1536x1024. Exuberant sophisticated editorial collage of tactile cut-paper forms and carefully lit objects with real paper grain and soft studio shadows. Clear strong recognizable silhouette, surprising crops, professional art direction. Palette electric cobalt #2458E8, coral #F16B55, sunflower #F3CE45, teal #1B968D, paper white #F7F8FC, deep ink. Visually coherent magazine series. Leave breathing room for responsive crops. No text, letters, typography, logos, watermark or UI. Not a documentary photograph, not glossy generic 3D clipart.\nSubject: A sculptural arrangement of blank books, a theatre curtain fragment, vinyl record and abstract art shapes. Teal backdrop, coral curtain, yellow and cobalt paper. Playful editorial still-life. No cover art."
+    }
+  ]
+}

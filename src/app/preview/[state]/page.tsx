@@ -2,6 +2,7 @@
 import { notFound } from "next/navigation";
 import { NewsFeed } from "@/components/feed";
 import Loading from "@/app/loading";
+import { sampleFeed } from "@/lib/fixtures";
 export const dynamic = "force-dynamic";
 export default async function Preview({
   params,
@@ -15,6 +16,22 @@ export default async function Preview({
     notFound();
   const { state } = await params;
   if (state === "loading") return <Loading />;
+  if (state === "one" || state === "long") {
+    const sample = sampleFeed("latest");
+    if (sample.status !== "ok") notFound();
+    const articles = sample.articles
+      .slice(0, state === "one" ? 1 : 12)
+      .map((article, index) => ({
+        ...article,
+        title:
+          state === "long" && index % 3 === 0
+            ? "Fictional community research project brings residents, independent makers and local libraries together to explore a more connected and thoughtful future for everyday public spaces"
+            : article.title,
+        author: index === 0 ? null : article.author,
+        publishedAt: index === 0 ? null : article.publishedAt,
+      }));
+    return <NewsFeed active="latest" result={{ ...sample, articles }} />;
+  }
   if (state === "empty")
     return (
       <NewsFeed

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { Globe } from "@/components/graphics";
+import { TopicImage } from "@/components/feed";
 export const metadata: Metadata = { title: "About the project" };
 export default function About() {
   return (
@@ -19,8 +19,8 @@ export default function About() {
           </p>
           <h2>What WorldBrief does</h2>
           <p>
-            WorldBrief brings recent English headlines into one quiet, readable
-            space. The homepage and six topic feeds use the official{" "}
+            WorldBrief brings recent English headlines into one colourful,
+            readable space. The homepage and six topic feeds use the official{" "}
             <a
               href="https://currentsapi.services/"
               target="_blank"
@@ -36,8 +36,8 @@ export default function About() {
             Original headlines, source domains, publication dates and available
             author credits are preserved. Source domains are labelled as
             domains, rather than guessed publisher names. Descriptions,
-            photographs and full articles are omitted. WorldBrief does not
-            scrape publishers, bypass paywalls, or create AI summaries.
+            publisher photographs and full articles are omitted. WorldBrief does
+            not scrape publishers, bypass paywalls, or create AI summaries.
           </p>
           <h2>A little context matters</h2>
           <p>
@@ -69,19 +69,28 @@ export default function About() {
             instructions. The project helps me learn how server components,
             private API keys, caching and responsive design fit together.
           </p>
+          <h2>Art with a purpose</h2>
+          <p>
+            The six original topic illustrations were created with AI assistance
+            for WorldBrief. They invite exploration of a subject; they do not
+            depict reported events. Artwork beside a headline is labelled “Topic
+            illustration.” News reporting remains with its original source.
+          </p>
           <Link href="/" prefetch={false} className="text-link">
             Explore the headlines →
           </Link>
         </div>
         <aside className="about-aside">
-          <Globe large />
-          <span className="eyebrow">Built to learn</span>
+          <div className="about-art">
+            <TopicImage
+              topic="general"
+              sizes="(max-width: 680px) 100vw, 33vw"
+            />
+          </div>
+          <span className="eyebrow">Built with curiosity</span>
           <p>
-            Next.js
-            <br />
-            TypeScript
-            <br />
-            Tailwind CSS
+            A wider world.
+            <br />A little closer.
           </p>
           <span className="about-signature">Shkamb</span>
         </aside>

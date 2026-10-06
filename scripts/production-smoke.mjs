@@ -64,11 +64,29 @@ try {
       "Private environment canary leaked into browser JavaScript",
     );
   }
+  for (const topic of [
+    "general",
+    "technology",
+    "business",
+    "politics",
+    "sports",
+    "culture",
+  ]) {
+    const response = await fetch(origin + `/images/topics/${topic}.webp`);
+    assert.equal(response.status, 200, `Missing topic artwork: ${topic}`);
+    assert.ok(response.headers.get("content-type")?.includes("image/webp"));
+    assert.ok((await response.arrayBuffer()).byteLength > 1000);
+  }
+  const optimized = await fetch(
+    origin + "/_next/image?url=%2Fimages%2Ftopics%2Fgeneral.webp&w=640&q=75",
+  );
+  assert.equal(optimized.status, 200, "Production image optimization failed");
+  assert.ok(optimized.headers.get("content-type")?.startsWith("image/"));
   const preview = await (await fetch(origin + "/preview/empty")).text();
   assert.ok(preview.includes("This story ends here."));
   assert.ok(!preview.includes("No headlines here just yet."));
   console.log(
-    `Production smoke passed: eight pages, ${assets.size} JavaScript assets, private env canary, and disabled QA previews. No live API was called.`,
+    `Production smoke passed: eight pages, ${assets.size} JavaScript assets, six topic illustrations, image optimization, private env canary, and disabled QA previews. No live API was called.`,
   );
 } finally {
   server.kill();

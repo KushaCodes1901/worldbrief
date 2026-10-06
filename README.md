@@ -4,13 +4,15 @@ A personal, non-commercial English news discovery portfolio project by **Shkamb*
 
 **Repository:** [KushaCodes1901/worldbrief](https://github.com/KushaCodes1901/worldbrief)
 
-**Publishing status:** public repository created; Vercel deployment awaits account setup. Real Currents news and deployed cache reuse have not yet been tested with a live key. No live website URL has been verified yet.
+**Publishing status:** production launch is being prepared. Live Currents fetching has been verified locally for the homepage and Technology & Science. Vercel deployment, production cache reuse and public access remain unverified; no live website URL has been verified yet.
 
 The initial [GitHub Actions checks](https://github.com/KushaCodes1901/worldbrief/actions) passed on a clean Ubuntu runner without a live API key.
 
 ## Interface
 
 These screenshots show **clearly labelled fictional sample content**, not live reporting.
+
+The colourful magazine redesign includes six original generated topic illustrations, a news-first opening, image-led topic navigation and subtle hover/focus effects. See the [full-page view](docs/screenshots/desktop-full.jpg) and [artwork prompts](docs/topic-art-prompts.json).
 
 ![WorldBrief desktop interface](docs/screenshots/desktop.jpg)
 
@@ -26,7 +28,7 @@ These screenshots show **clearly labelled fictional sample content**, not live r
 
 - Homepage plus General, Technology & Science, Business, Politics, Sports and Culture feeds.
 - Original headline links, source domains, publication dates in UTC, and available author credits.
-- Responsive cream-and-ink editorial design with original SVG graphics, keyboard navigation, skip link and visible focus.
+- Responsive magazine design with cobalt, coral, yellow and teal accents, original generated topic artwork, keyboard navigation, skip link, visible focus and reduced-motion support.
 - About, loading, empty, unavailable-service and not-found screens.
 - Server-only Currents integration, safe response normalization and one-hour operational caching.
 - No accounts, database, full-article pages, publisher photos, descriptions, AI summaries, polling, or news archive.
@@ -64,7 +66,7 @@ npm run scan:secrets
 npm start
 ```
 
-Builds and routine checks require no news key and do not call Currents. Development-only QA screens at `/preview/loading`, `/preview/empty`, and `/preview/unavailable` are available only during `npm run demo`; they return not-found in production.
+Builds and routine checks require no news key and do not call Currents. Development-only QA screens at `/preview/loading`, `/preview/empty`, `/preview/unavailable`, `/preview/one` and `/preview/long` are available only during `npm run demo`; they return not-found in production. The last two exercise single-item and long-headline layouts, including missing dates/authors.
 
 ## Structure, in plain language
 
@@ -84,17 +86,17 @@ Vercel's [Hobby plan](https://vercel.com/docs/plans/hobby) is for personal, non-
 
 ## Attribution and content limitations
 
-The linked **Powered by Currents News API** notice appears beside the feed and in the footer. Source domain labels, author credits and direct publisher links appear on cards. API access does not grant blanket publisher rights. Descriptions and photographs are deliberately omitted. See [CONTENT_USE.md](CONTENT_USE.md) for the implemented approach and unresolved permissions. The MIT licence covers original code and fictional examples only; third-party news content is excluded.
+The linked **Powered by Currents News API** notice appears beside the feed and in the footer. Source domain labels, author credits and direct publisher links appear on cards. API access does not grant blanket publisher rights. Descriptions and publisher photographs are deliberately omitted. The original generated topic illustrations are decorative conceptual artwork; when used beside a headline they carry a visible “Topic illustration” label. They do not depict reported events. Six optimised local WebP assets live in `public/images/topics`; their generation prompts are recorded in `docs/topic-art-prompts.json`. See [CONTENT_USE.md](CONTENT_USE.md) for the implemented approach and unresolved permissions. The MIT licence covers original code and fictional examples only; third-party news content is excluded.
 
 ## Testing and evidence
 
 - Lint, strict TypeScript checking, production build and dependency audit.
 - Focused automated tests: normalization, missing fields, duplicates, invalid dates, non-English records, unsafe URLs, topic validation, authenticated request construction, credentials/quota/provider/timeout errors, sanitized failures, shared-cache contract reuse/expiry/isolation, long Retry-After and fail-closed cache errors.
-- Browser checks at 375, 768 and 1440 pixels: no horizontal overflow; desktop, tablet and mobile screenshots; visible keyboard focus; keyboard topic switching; correct external link attributes; loading, empty, unavailable and invalid-topic screens.
+- Browser checks at 375, 768, 840 and 1440 pixels: no horizontal overflow; desktop, tablet and mobile screenshots; visible keyboard focus; keyboard topic switching; correct external link attributes; loading, empty, unavailable and invalid-topic screens. Redesign QA also checks single-item feeds, long titles, missing authors/dates, loaded local images, and text contrast.
 - Pattern scan of publishable files and browser-delivered build assets. Scans reduce risk but are not a mathematical guarantee.
 - Production HTTP smoke checks for the homepage, six topics and About; fictional private environment canary absent from HTML and JavaScript; development QA screens disabled in production. Zero live API calls.
 
-**Not yet verified:** a real key, actual publisher links from live responses, actual free account category access, production cache hits and public Vercel access. Mocked tests are not live integration tests. See [PUBLISHING.md](PUBLISHING.md) for the remaining verification steps. GitHub Actions runs checks and the production build without secrets.
+**Live verification so far:** the homepage and Technology & Science return real headline metadata locally, without sample content. **Not yet verified:** all six topics on the live account, live publisher link navigation, production cache hits and public Vercel access. Mocked tests are not live integration tests. See [PUBLISHING.md](PUBLISHING.md) for the remaining verification steps. GitHub Actions runs checks and the production build without secrets.
 
 ## AI assistance
 
