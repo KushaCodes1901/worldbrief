@@ -11,8 +11,17 @@ import type { Feed } from "./topics";
 const directory = join(process.cwd(), ".next", "cache", "worldbrief");
 const localCache: SharedCache = {
   async get(key) {
-    try { return JSON.parse(await readFile(join(directory, `${encodeURIComponent(key)}.json`), "utf8")); }
-    catch (error) { if ((error as NodeJS.ErrnoException).code === "ENOENT") return null; throw error; }
+    try {
+      return JSON.parse(
+        await readFile(
+          join(directory, `${encodeURIComponent(key)}.json`),
+          "utf8",
+        ),
+      );
+    } catch (error) {
+      if ((error as NodeJS.ErrnoException).code === "ENOENT") return null;
+      throw error;
+    }
   },
   async set(key, value) {
     await mkdir(directory, { recursive: true });
@@ -25,10 +34,12 @@ const localCache: SharedCache = {
 export async function getNews(feed: Feed): Promise<FeedResult> {
   if (process.env.WORLDBRIEF_DEMO_MODE === "true") return sampleFeed(feed);
   const key = process.env.CURRENTS_API_KEY;
-  if (!key) return { status: "unavailable", reason: "configuration", retryAt: null };
+  if (!key)
+    return { status: "unavailable", reason: "configuration", retryAt: null };
   if (process.env.VERCEL === "1") {
     // Preview never consumes the real free-tier quota.
-    if (process.env.VERCEL_ENV !== "production") return { status: "unavailable", reason: "configuration", retryAt: null };
+    if (process.env.VERCEL_ENV !== "production")
+      return { status: "unavailable", reason: "configuration", retryAt: null };
     return readCachedFeed(feed, getCache(), () => fetchCurrents(feed, key));
   }
   return readCachedFeed(feed, localCache, () => fetchCurrents(feed, key));

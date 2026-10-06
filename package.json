@@ -2,7 +2,9 @@
   "name": "worldbrief",
   "version": "1.0.0",
   "private": true,
-  "engines": { "node": ">=22 <25" },
+  "engines": {
+    "node": ">=22 <25"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,6 +12,7 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "test": "tsx --test tests/*.test.ts",
+    "test:production": "node scripts/production-smoke.mjs",
     "check": "npm run lint && npm run typecheck && npm test",
     "demo": "node scripts/demo.mjs",
     "scan:secrets": "node scripts/scan-secrets.mjs"

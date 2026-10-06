@@ -1,6 +1,10 @@
 export const topics = [
   { slug: "general", label: "General", category: "general" },
-  { slug: "technology", label: "Technology & Science", category: "science_technology" },
+  {
+    slug: "technology",
+    label: "Technology & Science",
+    category: "science_technology",
+  },
   { slug: "business", label: "Business", category: "economy_business_finance" },
   { slug: "politics", label: "Politics", category: "politics_government" },
   { slug: "sports", label: "Sports", category: "sport" },

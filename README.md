@@ -6,6 +6,8 @@ A personal, non-commercial English news discovery portfolio project by **Shkamb*
 
 **Publishing status:** public repository created; Vercel deployment awaits account setup. Real Currents news and deployed cache reuse have not yet been tested with a live key. No live website URL has been verified yet.
 
+The initial [GitHub Actions checks](https://github.com/KushaCodes1901/worldbrief/actions) passed on a clean Ubuntu runner without a live API key.
+
 ## Interface
 
 These screenshots show **clearly labelled fictional sample content**, not live reporting.
@@ -57,6 +59,7 @@ Put your key after `CURRENTS_API_KEY=` **in that private file only**. Never past
 ```sh
 npm run check
 npm run build
+npm run test:production
 npm run scan:secrets
 npm start
 ```
@@ -89,6 +92,7 @@ The linked **Powered by Currents News API** notice appears beside the feed and i
 - Focused automated tests: normalization, missing fields, duplicates, invalid dates, non-English records, unsafe URLs, topic validation, authenticated request construction, credentials/quota/provider/timeout errors, sanitized failures, shared-cache contract reuse/expiry/isolation, long Retry-After and fail-closed cache errors.
 - Browser checks at 375, 768 and 1440 pixels: no horizontal overflow; desktop, tablet and mobile screenshots; visible keyboard focus; keyboard topic switching; correct external link attributes; loading, empty, unavailable and invalid-topic screens.
 - Pattern scan of publishable files and browser-delivered build assets. Scans reduce risk but are not a mathematical guarantee.
+- Production HTTP smoke checks for the homepage, six topics and About; fictional private environment canary absent from HTML and JavaScript; development QA screens disabled in production. Zero live API calls.
 
 **Not yet verified:** a real key, actual publisher links from live responses, actual free account category access, production cache hits and public Vercel access. Mocked tests are not live integration tests. See [PUBLISHING.md](PUBLISHING.md) for the remaining verification steps. GitHub Actions runs checks and the production build without secrets.
 
