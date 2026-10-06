@@ -1,0 +1,1 @@
+export default function Loading() { return <main id="main-content" className="shell loading-page" aria-busy="true"><span className="eyebrow">WorldBrief</span><h1>Gathering the headlines.</h1><p role="status">Loading the selected feed…</p><div className="skeleton-grid" aria-hidden="true">{[0, 1, 2, 3].map((i) => <div className="skeleton" key={i} />)}</div></main>; }
