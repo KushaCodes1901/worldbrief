@@ -4,7 +4,9 @@ A personal, non-commercial English news discovery portfolio project by **Shkamb*
 
 **Repository:** [KushaCodes1901/worldbrief](https://github.com/KushaCodes1901/worldbrief)
 
-**Publishing status:** production launch is being prepared. Live Currents fetching has been verified locally for the homepage and Technology & Science. Vercel deployment, production cache reuse and public access remain unverified; no live website URL has been verified yet.
+**Live website:** [worldbrief.vercel.app](https://worldbrief.vercel.app)
+
+**Publishing status:** launched on 6 October 2026 using Vercel Hobby. The public production domain works without a Vercel login and serves real Currents headlines. All seven feeds, About, images, mobile layout and shared production cache hits have been verified. No paid plan, trial or custom domain was added.
 
 The initial [GitHub Actions checks](https://github.com/KushaCodes1901/worldbrief/actions) passed on a clean Ubuntu runner without a live API key.
 
@@ -96,7 +98,7 @@ The linked **Powered by Currents News API** notice appears beside the feed and i
 - Pattern scan of publishable files and browser-delivered build assets. Scans reduce risk but are not a mathematical guarantee.
 - Production HTTP smoke checks for the homepage, six topics and About; fictional private environment canary absent from HTML and JavaScript; development QA screens disabled in production. Zero live API calls.
 
-**Live verification so far:** the homepage and Technology & Science return real headline metadata locally, without sample content. **Not yet verified:** all six topics on the live account, live publisher link navigation, production cache hits and public Vercel access. Mocked tests are not live integration tests. See [PUBLISHING.md](PUBLISHING.md) for the remaining verification steps. GitHub Actions runs checks and the production build without secrets.
+**Live verification, 6 October 2026:** unauthenticated HTTP requests to the homepage, six topics and About returned 200; every news feed contained 20 real articles with no sample banner. Nine browser JavaScript assets and all eight HTML pages were checked locally against the private key, with no match. Six WebP assets and Vercel image optimization passed. The public browser layout had no page overflow at 375px and desktop width; article links retain safe external attributes and a DW headline opened its original publisher in a separate tab. Keyboard focus is visible. Vercel confirmed Node.js 24.x, Production, Frankfurt (`fra1`) and Ready. Runtime Cache reads increased from 11 to 14 after three repeat homepage requests while writes remained 7; the displayed hit rate reached 50%. This establishes observed production reuse, not a guaranteed quota cap or future uptime. Provider-account usage and publisher rights still need ongoing owner review. See [PUBLISHING.md](PUBLISHING.md) for repeatable verification. GitHub Actions runs checks and the production build without secrets.
 
 ## AI assistance
 
